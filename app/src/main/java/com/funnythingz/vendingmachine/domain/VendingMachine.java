@@ -13,19 +13,8 @@ public class VendingMachine {
         clearPurchased();
     }
 
-    public Drink selectDrinkButton(DrinkMenu drinkMenu) {
-        switch (drinkMenu) {
-            case Cola:
-                return new Cola();
-            case Fanta:
-                return new Fanta();
-            case Soda:
-                return new Soda();
-            case Pocali:
-                return new Pocali();
-        }
-
-        return null;
+    public Drink selectDrinkButton(DrinkName drinkName) {
+        return new Drink(drinkName);
     }
 
     public void touchSuica(Suica suica) {
